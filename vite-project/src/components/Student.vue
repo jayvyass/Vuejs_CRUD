@@ -5,11 +5,11 @@
       <div class="col-md-10">
         <div class="card mt-4">
           <div class="card-body">
-            <form @submit.prevent="save" v-if="showForm" class="w-40">
+            <form @submit.prevent="save" v-if="showForm" class="w-">
               <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="name" id="name" class="form-control" v-model="formData.name">
-              </div>
+              </div>             
               <ImageUpload :label="'Image'" :imageUrl="formData.image" :formData="formData" @image-selected="handleImageSelected" />
               <div class="form-group">
                 <label for="email">Email:</label>
@@ -89,7 +89,7 @@ import StatusToggle from './Status.vue';
 export default {
   components: {
     ImageUpload,
-    StatusToggle
+    StatusToggle,
   },
   name: 'Student',
   data() {
